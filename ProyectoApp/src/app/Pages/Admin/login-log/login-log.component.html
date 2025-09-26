@@ -1,0 +1,81 @@
+
+
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <br>
+
+  </div>
+  <div class="col-lg-2">
+  </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+
+        <div class="ibox-title">
+          <h5 align="center">Listado de LoginLogs existentes en el sistema</h5>
+
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="ibox-content">
+          <div class="table-responsive">
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped table-bordered table-hover dataTables-example">
+
+              <thead>
+                <tr>
+                   
+                  <th>Id </th>
+                  <th>Username </th>
+                  <th>LoginTime </th>
+                  <th>AccessToken </th> 
+                   
+                </tr>
+              </thead>
+
+              <tbody *ngIf="List && List?.length != 0">
+
+                <tr *ngFor="let item of List">
+
+                  <td> {{item.Id}} </td>
+                  <td> {{item.UserName}} </td>
+                  <td> {{item.LoginTime}} </td>
+                  <td> {{item.AccessToken}} </td> 
+                </tr>
+
+              </tbody>
+              <tfoot>
+                <tr>
+
+                  <th>Id </th>
+                  <th>Username </th>
+                  <th>LoginTime </th>
+                  <th>AccessToken </th>
+
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

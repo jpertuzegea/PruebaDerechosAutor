@@ -1,0 +1,37 @@
+
+<body class="gray-bg">
+
+  <div class="middle-box text-center loginscreen animated fadeInDown">
+
+    <div>
+      <div>
+        <!--<img width="250" src="./assets/Image/Logo.png" alt>-->
+      </div>
+      <h3>Bienvenidos a Soft Jorge Pertuz Egea</h3>
+      <p>
+        Software para la Administracion Desarrollado por :
+      </p>
+      <p>Ing. Jorge Pertuz Egea</p>
+      <h3>Inicio de Sesion</h3>
+
+      <form (submit)="Login()" [formGroup]="form">
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Usuario" required="" formControlName="UserNetwork">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Clave" required="" formControlName="Password">
+        </div>
+
+        <button type="submit" id="boton" name="boton" class="btn btn-primary block full-width m-b">Iniciar Sesión</button>
+      </form>
+
+      <p class="text-muted text-center"><small>Jorge David Pertuz Egea.</small></p>
+      <p class="text-muted text-center"><small> <b>CONTACTO CELULAR : </b> ( +57 ) 315 - 534 - 2264 </small></p>
+      <p class="text-muted text-center"><small> <b>Email : </b> jpertuzegea@hotmail.com </small> </p>
+
+      <p class="m-t"> <small> Todos los derechos reservados &copy; 2023</small> </p>
+    </div>
+  </div>
+
+</body>

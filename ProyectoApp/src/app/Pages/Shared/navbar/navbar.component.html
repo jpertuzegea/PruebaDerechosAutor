@@ -1,0 +1,53 @@
+
+
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+          <span>
+            <img alt="image" class="img-circle" src="./assets/img/profile_small.jpg" />
+            <img alt="image" width="60%" height="60%" class="img-circle" src="./assets/Image/LogoColor.png" />
+          </span>
+
+          <a data-toggle="dropdown" class="dropdown-toggle" href="">
+            <span class="clear">
+              <span class="block m-t-xs">
+                <strong class="font-bold">{{UserFullName}}</strong>
+              </span> <span class="text-muted text-xs block">{{UserRolName}}<b class="caret"></b></span>
+            </span>
+          </a>
+
+          <ul class="dropdown-menu animated fadeInRight m-t-xs">
+            <li *ngIf="Permisions.indexOf('Mi_Perfil')> 0"><a [routerLink]="['/Securit/Update-Profile']">Mi Perfil</a></li>
+            <li *ngIf="Permisions.indexOf('Cambiar_Clave')> 0"><a [routerLink]="['/Securit/changepassword']">Cambiar Clave</a></li>
+            <li *ngIf="Permisions.indexOf('Cambiar_Imagen')> 0"><a [routerLink]="['/Securit/Update-User-Image']">Cambiar Imagen</a></li>
+            <li class="divider"></li>
+            <li><a routerLink="">Cerrar Sesion</a></li>
+          </ul>
+
+        </div>
+
+        <div class="logo-element">
+          IN+
+        </div>
+
+      </li>
+
+      <li>
+        <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">Administracion</span> <span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+          <li><a routerLink="/Admin/Usuarios">Gestion Usuarios</a></li>
+          <li><a routerLink="/Admin/LoginLog">Reporte Login</a></li>
+        </ul>
+      </li>
+
+
+
+    </ul>
+
+  </div>
+</nav>
+
+
+

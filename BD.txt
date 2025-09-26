@@ -1,0 +1,14 @@
+create database Prueba;
+use Prueba;
+
+ CREATE TABLE [LoginLog](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserName] [varchar](30) NULL,	
+	[LoginTime] [varchar](30) NULL,	
+	[AccessToken]  VARCHAR(MAX)	
+	PRIMARY KEY (Id)
+	);
+	DBCC CHECKIDENT ([LoginLog], RESEED,1); -- obliga a que el contador de llave primaria empiece en 1 
+	 
+	 
+	
