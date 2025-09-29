@@ -8,8 +8,6 @@
 using Commons.Dtos;
 using Commons.Dtos.Configurations;
 using Interfaces.Interfaces;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Proyecto.Controllers
